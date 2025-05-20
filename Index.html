@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chan 'Maggiso' Miabek - Fullstack Developer</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#3b82f6',secondary:'#f97316'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Inter', sans-serif;
+scroll-behavior: smooth;
+}
+.typing-text::after {
+content: "|";
+animation: blink 1s infinite;
+}
+@keyframes blink {
+0%, 100% { opacity: 1; }
+50% { opacity: 0; }
+}
+.particle {
+position: absolute;
+border-radius: 50%;
+background: rgba(59, 130, 246, 0.1);
+pointer-events: none;
+}
+input:focus, textarea:focus {
+outline: none;
+border-color: #3b82f6;
+}
+.floating {
+animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+0%, 100% { transform: translateY(0); }
+50% { transform: translateY(-10px); }
+}
+</style>
+</head>
+<body class="bg-white">
+<!-- Navigation -->
+<nav class="fixed top-0 w-full bg-white shadow-sm z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-16">
+<div class="flex items-center">
+<a href="#" class="text-2xl font-['Pacifico'] text-primary">Maggiso</a>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a href="#about" class="text-gray-700 hover:text-primary transition-colors">About</a>
+<a href="#projects" class="text-gray-700 hover:text-primary transition-colors">Projects</a>
+<a href="#skills" class="text-gray-700 hover:text-primary transition-colors">Skills</a>
+<a href="#achievements" class="text-gray-700 hover:text-primary transition-colors">Achievements</a>
+<a href="#blog" class="text-gray-700 hover:text-primary transition-colors">Blog</a>
+<a href="#contact" class="bg-primary text-white px-4 py-2 !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap">Contact Me</a>
+</div>
+<div class="flex md:hidden items-center">
+<button type="button" class="w-10 h-10 flex items-center justify-center text-gray-700">
+<i class="ri-menu-line ri-lg"></i>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="pt-24 pb-16 md:pt-32 md:pb-24 relative overflow-hidden" id="hero">
+<div class="absolute inset-0 opacity-5" id="particles"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+<div class="flex flex-col md:flex-row items-center gap-8 md:gap-16">
+<div class="w-full md:w-1/2">
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
+Chan 'Maggiso' Miabek
+</h1>
+<div class="text-xl md:text-2xl text-primary font-medium mb-6 typing-text" id="typingText">
+Fullstack Developer
+</div>
+<p class="text-lg text-gray-700 mb-8">
+Building digital solutions from Kakuma Refugee Camp to the world. Inspired by the power of technology to create positive change and make the world a better place.
+</p>
+<div class="flex flex-col sm:flex-row gap-4 mb-8">
+<div class="flex items-center gap-2 bg-gray-50 px-4 py-3 rounded">
+<i class="ri-mail-line ri-lg text-primary"></i>
+<span class="text-gray-700">chanmiabek22@gmail.com</span>
+<button class="ml-auto w-8 h-8 flex items-center justify-center text-gray-500 hover:text-primary" id="copyEmail">
+<i class="ri-file-copy-line"></i>
+</button>
+</div>
+<div class="flex items-center gap-2 bg-gray-50 px-4 py-3 rounded">
+<i class="ri-phone-line ri-lg text-primary"></i>
+<span class="text-gray-700">+254 738 447 384</span>
+<button class="ml-auto w-8 h-8 flex items-center justify-center text-gray-500 hover:text-primary" id="copyPhone">
+<i class="ri-file-copy-line"></i>
+</button>
+</div>
+</div>
+<a href="#contact" class="inline-block bg-primary text-white px-8 py-3 !rounded-button hover:bg-primary/90 transition-transform hover:-translate-y-1 whitespace-nowrap">
+Let's Connect
+</a>
+</div>
+<div class="w-full md:w-1/2 flex justify-center">
+<div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full bg-gray-100 overflow-hidden border-4 border-white shadow-xl floating">
+<img src="https://static.readdy.ai/image/9f98809d1dbc85aa87f5bacda8e3fb5b/56bf7394bf7f18ba3a8b032c74450a85.jpeg"
+alt="Chan Miabek"
+class="w-full h-full object-cover object-top">
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-16 bg-gray-50" id="about">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold text-gray-900">About Me</h2>
+<div class="w-16 h-1 bg-primary mx-auto mt-4"></div>
+</div>
+<div class="flex flex-col md:flex-row gap-12">
+<div class="w-full md:w-1/2">
+<h3 class="text-2xl font-semibold text-gray-900 mb-4">My Journey</h3>
+<p class="text-gray-700 mb-4">
+As a fullstack developer based in Kakuma Refugee Camp, I've transformed challenges into opportunities for growth and innovation. My journey in tech began with a curiosity about how digital solutions could address the unique challenges faced in refugee settings.
+</p>
+<p class="text-gray-700 mb-4">
+Despite limited resources, I taught myself programming through online courses, community workshops, and countless hours of practice. What started as a personal pursuit has evolved into a mission to leverage technology for positive change.
+</p>
+<p class="text-gray-700">
+Today, I specialize in creating responsive web applications, mobile solutions, and community-focused digital tools that bridge gaps and create opportunities for underserved communities.
+</p>
+</div>
+<div class="w-full md:w-1/2">
+<h3 class="text-2xl font-semibold text-gray-900 mb-4">My Mission</h3>
+<div class="bg-white p-6 rounded shadow-sm mb-6">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary">
+<i class="ri-code-line ri-lg"></i>
+</div>
+<h4 class="text-xl font-medium text-gray-900">Empowering Through Technology</h4>
+</div>
+<p class="text-gray-700">
+To use my skills to create digital solutions that address real-world challenges faced by refugee and marginalized communities.
+</p>
+</div>
+<div class="bg-white p-6 rounded shadow-sm mb-6">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary">
+<i class="ri-user-voice-line ri-lg"></i>
+</div>
+<h4 class="text-xl font-medium text-gray-900">Inspiring Others</h4>
+</div>
+<p class="text-gray-700">
+To demonstrate that circumstances don't define potential, and to mentor aspiring developers from similar backgrounds.
+</p>
+</div>
+<div class="bg-white p-6 rounded shadow-sm">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary">
+<i class="ri-global-line ri-lg"></i>
+</div>
+<h4 class="text-xl font-medium text-gray-900">Building Bridges</h4>
+</div>
+<p class="text-gray-700">
+To connect refugee talent with global opportunities through technology and collaborative projects.
+</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Skills Section -->
+<section class="py-16" id="skills">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold text-gray-900">Technical Skills</h2>
+<div class="w-16 h-1 bg-primary mx-auto mt-4"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white p-6 rounded shadow-sm">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full text-primary">
+<i class="ri-code-s-slash-line ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900">Frontend Development</h3>
+</div>
+<div class="space-y-4">
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-gray-700">HTML/CSS</span>
+<span class="text-gray-500">95%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 95%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-gray-700">JavaScript</span>
+<span class="text-gray-500">90%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 90%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-gray-700">React</span>
+<span class="text-gray-500">85%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 85%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-gray-700">Vue.js</span>
+<span class="text-gray-500">80%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 80%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-gray-700">Tailwind CSS</span>
+<span class="text-gray-500">90%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 90%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white p-6 rounded shadow-sm">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full text-primary">
+<i class="ri-server-line ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900">Backend Development</h3>
+</div>
+<div class="space-y-4">
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-gray-700">Node.js</span>
+<span class="text-gray-500">85%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 85%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-gray-700">Express</span>
+<span class="text-gray-500">90%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 90%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-gray-700">Python/Django</span>
+<span class="text-gray-500">75%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 75%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-gray-700">PHP/Laravel</span>
+<span class="text-gray-500">70%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 70%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-gray-700">RESTful APIs</span>
+<span class="text-gray-500">85%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 85%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white p-6 rounded shadow-sm">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full text-primary">
+<i class="ri-database-2-line ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900">Other Technologies</h3>
+</div>
+<div class="space-y-4">
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-gray-700">MongoDB</span>
+<span class="text-gray-500">80%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 80%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-gray-700">MySQL/PostgreSQL</span>
+<span class="text-gray-500">75%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 75%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-gray-700">Git/GitHub</span>
+<span class="text-gray-500">90%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 90%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-gray-700">Docker</span>
+<span class="text-gray-500">70%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 70%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-gray-700">AWS/Cloud Services</span>
+<span class="text-gray-500">65%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 65%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Section -->
+<section class="py-16 bg-gray-50" id="projects">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold text-gray-900">Recent Projects</h2>
+<div class="w-16 h-1 bg-primary mx-auto mt-4"></div>
+<p class="text-gray-700 mt-4 max-w-2xl mx-auto">
+Here are some of the projects I've worked on recently. Each project represents a unique challenge and solution.
+</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Project 1 -->
+<div class="bg-white rounded overflow-hidden shadow-sm transition-transform hover:-translate-y-1">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=A%2520modern%2520educational%2520platform%2520interface%2520showing%2520a%2520dashboard%2520with%2520learning%2520modules%2C%2520progress%2520tracking%2C%2520and%2520educational%2520content.%2520The%2520design%2520is%2520clean%2520and%2520user-friendly%2520with%2520a%2520blue%2520color%2520scheme%2C%2520suitable%2520for%2520refugee%2520education.%2520The%2520interface%2520shows%2520various%2520courses%2520and%2520learning%2520paths.&width=600&height=400&seq=project1&orientation=landscape"
+alt="KakumaLearn Platform"
+class="w-full h-full object-cover object-top transition-transform hover:scale-105">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold text-gray-900 mb-2">KakumaLearn Platform</h3>
+<p class="text-gray-700 mb-4">
+An e-learning platform designed specifically for refugee students in Kakuma, providing access to educational resources even with limited internet connectivity.
+</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">React</span>
+<span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Node.js</span>
+<span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">MongoDB</span>
+<span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">PWA</span>
+</div>
+<div class="flex justify-between">
+<a href="#" class="text-primary hover:text-primary/80 flex items-center gap-1">
+<span>View Project</span>
+<i class="ri-arrow-right-line"></i>
+</a>
+<a href="#" class="text-gray-500 hover:text-gray-700 flex items-center gap-1">
+<i class="ri-github-fill"></i>
+<span>GitHub</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="bg-white rounded overflow-hidden shadow-sm transition-transform hover:-translate-y-1">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=A%2520mobile%2520app%2520interface%2520for%2520a%2520health%2520tracking%2520application%2520showing%2520medical%2520appointment%2520scheduling%2C%2520medication%2520reminders%2C%2520and%2520health%2520metrics.%2520The%2520design%2520is%2520clean%2520with%2520a%2520focus%2520on%2520accessibility%2520and%2520ease%2520of%2520use%2C%2520with%2520simple%2520navigation%2520and%2520clear%2520icons.%2520The%2520color%2520scheme%2520uses%2520calming%2520blues%2520and%2520greens.&width=600&height=400&seq=project2&orientation=landscape"
+alt="HealthTrack Mobile App"
+class="w-full h-full object-cover object-top transition-transform hover:scale-105">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold text-gray-900 mb-2">HealthTrack Mobile App</h3>
+<p class="text-gray-700 mb-4">
+A mobile application that helps refugees track health appointments, medication schedules, and access basic health information offline.
+</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">React Native</span>
+<span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Firebase</span>
+<span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Express</span>
+</div>
+<div class="flex justify-between">
+<a href="#" class="text-primary hover:text-primary/80 flex items-center gap-1">
+<span>View Project</span>
+<i class="ri-arrow-right-line"></i>
+</a>
+<a href="#" class="text-gray-500 hover:text-gray-700 flex items-center gap-1">
+<i class="ri-github-fill"></i>
+<span>GitHub</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="bg-white rounded overflow-hidden shadow-sm transition-transform hover:-translate-y-1">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=A%2520community%2520marketplace%2520web%2520application%2520interface%2520showing%2520local%2520products%2C%2520services%2C%2520and%2520skills%2520exchange.%2520The%2520design%2520features%2520a%2520grid%2520layout%2520of%2520product%2520cards%2C%2520search%2520functionality%2C%2520and%2520category%2520filters.%2520The%2520interface%2520is%2520colorful%2520but%2520professional%2C%2520designed%2520to%2520showcase%2520local%2520crafts%2520and%2520services%2520from%2520a%2520refugee%2520community.&width=600&height=400&seq=project3&orientation=landscape"
+alt="KakumaMarket Platform"
+class="w-full h-full object-cover object-top transition-transform hover:scale-105">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold text-gray-900 mb-2">KakumaMarket Platform</h3>
+<p class="text-gray-700 mb-4">
+A digital marketplace connecting refugee artisans and entrepreneurs with customers globally, facilitating economic empowerment.
+</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Vue.js</span>
+<span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Node.js</span>
+<span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">PostgreSQL</span>
+<span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Stripe</span>
+</div>
+<div class="flex justify-between">
+<a href="#" class="text-primary hover:text-primary/80 flex items-center gap-1">
+<span>View Project</span>
+<i class="ri-arrow-right-line"></i>
+</a>
+<a href="#" class="text-gray-500 hover:text-gray-700 flex items-center gap-1">
+<i class="ri-github-fill"></i>
+<span>GitHub</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="text-center mt-10">
+<a href="#" class="inline-block bg-white border border-primary text-primary px-6 py-3 !rounded-button hover:bg-primary hover:text-white transition-colors whitespace-nowrap">
+View All Projects
+</a>
+</div>
+</div>
+</section>
+<!-- Achievements Section -->
+<section class="py-16" id="achievements">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold text-gray-900">Achievements & Recognition</h2>
+<div class="w-16 h-1 bg-primary mx-auto mt-4"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-white p-6 rounded shadow-sm">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full text-primary flex-shrink-0 mt-1">
+<i class="ri-award-line ri-xl"></i>
+</div>
+<div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Africa Code Week Winner (2023)</h3>
+<p class="text-gray-700">
+Recognized for developing an innovative digital solution addressing healthcare access challenges in refugee settings. The project was highlighted for its practical implementation and impact potential.
+</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-6 rounded shadow-sm">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full text-primary flex-shrink-0 mt-1">
+<i class="ri-medal-line ri-xl"></i>
+</div>
+<div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Google Developer Challenge Scholarship (2022)</h3>
+<p class="text-gray-700">
+Selected among thousands of applicants to receive Google's developer scholarship, which provided advanced training in mobile web development and mentorship from Google engineers.
+</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-6 rounded shadow-sm">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full text-primary flex-shrink-0 mt-1">
+<i class="ri-lightbulb-line ri-xl"></i>
+</div>
+<div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2">UNHCR Innovation Award (2023)</h3>
+<p class="text-gray-700">
+Honored for creating the KakumaLearn platform, which was recognized for its innovative approach to education access in refugee settings with limited connectivity.
+</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-6 rounded shadow-sm">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full text-primary flex-shrink-0 mt-1">
+<i class="ri-user-star-line ri-xl"></i>
+</div>
+<div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Featured in "Tech for Good" Documentary (2024)</h3>
+<p class="text-gray-700">
+My journey and work were featured in a documentary highlighting technology innovators making a difference in challenging environments. The documentary was screened at several international film festivals.
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Blog Section -->
+<section class="py-16 bg-gray-50" id="blog">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold text-gray-900">From My Blog</h2>
+<div class="w-16 h-1 bg-primary mx-auto mt-4"></div>
+<p class="text-gray-700 mt-4 max-w-2xl mx-auto">
+I share my thoughts, experiences, and technical insights on my journey as a developer in Kakuma Refugee Camp.
+</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Blog Post 1 -->
+<div class="bg-white rounded overflow-hidden shadow-sm transition-transform hover:-translate-y-1">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=A%2520coding%2520workspace%2520in%2520a%2520modest%2520setting%2C%2520showing%2520a%2520laptop%2520with%2520code%2520on%2520screen%2C%2520surrounded%2520by%2520notebooks%2520and%2520a%2520simple%2520desk%2520setup.%2520The%2520image%2520conveys%2520determination%2520and%2520focus%2520despite%2520limited%2520resources.%2520Natural%2520lighting%2520creates%2520a%2520hopeful%2C%2520inspiring%2520atmosphere.%2520The%2520setting%2520suggests%2520a%2520refugee%2520camp%2520environment%2520but%2520with%2520dignity%2520and%2520purpose.&width=600&height=400&seq=blog1&orientation=landscape"
+alt="Coding in Kakuma"
+class="w-full h-full object-cover object-top transition-transform hover:scale-105">
+</div>
+<div class="p-6">
+<div class="flex items-center gap-2 text-gray-500 text-sm mb-3">
+<i class="ri-calendar-line"></i>
+<span>May 10, 2025</span>
+<span class="mx-1">•</span>
+<i class="ri-time-line"></i>
+<span>5 min read</span>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Coding in Kakuma: Overcoming Digital Divides</h3>
+<p class="text-gray-700 mb-4">
+How I navigate the challenges of unreliable internet, power outages, and limited resources to build web applications in a refugee camp.
+</p>
+<a href="#" class="text-primary hover:text-primary/80 flex items-center gap-1">
+<span>Read More</span>
+<i class="ri-arrow-right-line"></i>
+</a>
+</div>
+</div>
+<!-- Blog Post 2 -->
+<div class="bg-white rounded overflow-hidden shadow-sm transition-transform hover:-translate-y-1">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=A%2520group%2520of%2520diverse%2520young%2520people%2520gathered%2520around%2520computers%2520in%2520a%2520simple%2520classroom%2520setting%2C%2520engaged%2520in%2520learning%2520to%2520code.%2520The%2520image%2520shows%2520collaboration%2520and%2520mentorship%2C%2520with%2520one%2520person%2520explaining%2520something%2520on%2520screen%2520to%2520others.%2520The%2520setting%2520suggests%2520a%2520community%2520center%2520or%2520school%2520in%2520a%2520refugee%2520camp%2C%2520with%2520basic%2520but%2520functional%2520equipment.%2520The%2520atmosphere%2520is%2520one%2520of%2520determination%2520and%2520hope.&width=600&height=400&seq=blog2&orientation=landscape"
+alt="Teaching Code"
+class="w-full h-full object-cover object-top transition-transform hover:scale-105">
+</div>
+<div class="p-6">
+<div class="flex items-center gap-2 text-gray-500 text-sm mb-3">
+<i class="ri-calendar-line"></i>
+<span>April 25, 2025</span>
+<span class="mx-1">•</span>
+<i class="ri-time-line"></i>
+<span>7 min read</span>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2">From Student to Teacher: My Coding Workshop Journey</h3>
+<p class="text-gray-700 mb-4">
+Reflections on starting a coding workshop for youth in Kakuma and how teaching has improved my own programming skills.
+</p>
+<a href="#" class="text-primary hover:text-primary/80 flex items-center gap-1">
+<span>Read More</span>
+<i class="ri-arrow-right-line"></i>
+</a>
+</div>
+</div>
+<!-- Blog Post 3 -->
+<div class="bg-white rounded overflow-hidden shadow-sm transition-transform hover:-translate-y-1">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=A%2520professional%2520remote%2520work%2520setup%2520showing%2520a%2520laptop%2520connected%2520to%2520a%2520global%2520team%2520meeting%2520on%2520screen.%2520The%2520workspace%2520is%2520modest%2520but%2520organized%2C%2520with%2520notes%2520and%2520a%2520notebook%2520nearby.%2520The%2520screen%2520shows%2520multiple%2520people%2520in%2520a%2520video%2520conference%2C%2520suggesting%2520international%2520collaboration.%2520The%2520setting%2520indicates%2520a%2520resourceful%2520approach%2520to%2520remote%2520work%2520from%2520a%2520challenging%2520environment.&width=600&height=400&seq=blog3&orientation=landscape"
+alt="Remote Work"
+class="w-full h-full object-cover object-top transition-transform hover:scale-105">
+</div>
+<div class="p-6">
+<div class="flex items-center gap-2 text-gray-500 text-sm mb-3">
+<i class="ri-calendar-line"></i>
+<span>April 5, 2025</span>
+<span class="mx-1">•</span>
+<i class="ri-time-line"></i>
+<span>6 min read</span>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Remote Work Revolution: Connecting Refugee Talent to Global Opportunities</h3>
+<p class="text-gray-700 mb-4">
+How digital platforms are enabling refugees to access remote work opportunities and build sustainable careers in technology.
+</p>
+<a href="#" class="text-primary hover:text-primary/80 flex items-center gap-1">
+<span>Read More</span>
+<i class="ri-arrow-right-line"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="text-center mt-10">
+<a href="#" class="inline-block bg-white border border-primary text-primary px-6 py-3 !rounded-button hover:bg-primary hover:text-white transition-colors whitespace-nowrap">
+Read All Articles
+</a>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-16" id="contact">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold text-gray-900">Get In Touch</h2>
+<div class="w-16 h-1 bg-primary mx-auto mt-4"></div>
+<p class="text-gray-700 mt-4 max-w-2xl mx-auto">
+Have a project in mind or want to collaborate? I'm always open to discussing new opportunities and ideas.
+</p>
+</div>
+<div class="flex flex-col lg:flex-row gap-12">
+<div class="w-full lg:w-1/2">
+<form class="bg-white p-8 rounded shadow-sm">
+<div class="mb-6">
+<label for="name" class="block text-gray-700 mb-2">Your Name</label>
+<input type="text" id="name" class="w-full px-4 py-3 border border-gray-200 rounded focus:border-primary focus:ring-0" placeholder="John Doe">
+</div>
+<div class="mb-6">
+<label for="email" class="block text-gray-700 mb-2">Your Email</label>
+<input type="email" id="email" class="w-full px-4 py-3 border border-gray-200 rounded focus:border-primary focus:ring-0" placeholder="john@example.com">
+</div>
+<div class="mb-6">
+<label for="subject" class="block text-gray-700 mb-2">Subject</label>
+<input type="text" id="subject" class="w-full px-4 py-3 border border-gray-200 rounded focus:border-primary focus:ring-0" placeholder="Project Inquiry">
+</div>
+<div class="mb-6">
+<label for="message" class="block text-gray-700 mb-2">Your Message</label>
+<textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-200 rounded focus:border-primary focus:ring-0" placeholder="Tell me about your project or inquiry..."></textarea>
+</div>
+<button type="submit" class="w-full bg-primary text-white py-3 !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap">
+Send Message
+</button>
+</form>
+</div>
+<div class="w-full lg:w-1/2">
+<div class="bg-white p-8 rounded shadow-sm h-full">
+<h3 class="text-2xl font-semibold text-gray-900 mb-6">Contact Information</h3>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary flex-shrink-0">
+<i class="ri-mail-line ri-lg"></i>
+</div>
+<div>
+<h4 class="text-lg font-medium text-gray-900 mb-1">Email</h4>
+<p class="text-gray-700 flex items-center gap-2">
+chanmiabek22@gmail.com
+<button class="text-gray-500 hover:text-primary" id="copyEmailAlt">
+<i class="ri-file-copy-line"></i>
+</button>
+</p>
+<p class="text-gray-500 text-sm mt-1">Usually responds within 24 hours</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary flex-shrink-0">
+<i class="ri-phone-line ri-lg"></i>
+</div>
+<div>
+<h4 class="text-lg font-medium text-gray-900 mb-1">Phone</h4>
+<p class="text-gray-700 flex items-center gap-2">
++254 738 447 384
+<button class="text-gray-500 hover:text-primary" id="copyPhoneAlt">
+<i class="ri-file-copy-line"></i>
+</button>
+</p>
+<p class="text-gray-500 text-sm mt-1">Available Mon-Fri, 9AM-6PM EAT</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary flex-shrink-0">
+<i class="ri-map-pin-line ri-lg"></i>
+</div>
+<div>
+<h4 class="text-lg font-medium text-gray-900 mb-1">Location</h4>
+<p class="text-gray-700">Kakuma Refugee Camp, Kenya</p>
+<p class="text-gray-500 text-sm mt-1">Available for remote work worldwide</p>
+</div>
+</div>
+<div class="pt-6 border-t border-gray-100">
+<h4 class="text-lg font-medium text-gray-900 mb-4">Connect With Me</h4>
+<div class="flex gap-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full text-gray-700 hover:bg-primary hover:text-white transition-colors">
+<i class="ri-github-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full text-gray-700 hover:bg-primary hover:text-white transition-colors">
+<i class="ri-linkedin-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full text-gray-700 hover:bg-primary hover:text-white transition-colors">
+<i class="ri-twitter-x-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full text-gray-700 hover:bg-primary hover:text-white transition-colors">
+<i class="ri-instagram-fill"></i>
+</a>
+</div>
+</div>
+<div class="pt-6">
+<a href="#" class="inline-block bg-primary/10 text-primary px-6 py-3 !rounded-button hover:bg-primary hover:text-white transition-colors whitespace-nowrap">
+<i class="ri-calendar-line mr-2"></i> Schedule a Call
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white pt-16 pb-8">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+<div>
+<a href="#" class="text-3xl font-['Pacifico'] text-white mb-4 inline-block">Maggiso</a>
+<p class="text-gray-400 mb-6">
+Building digital solutions from Kakuma Refugee Camp to the world. Inspired by technology's power to create positive change.
+</p>
+<div class="flex gap-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full text-gray-400 hover:bg-primary hover:text-white transition-colors">
+<i class="ri-github-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full text-gray-400 hover:bg-primary hover:text-white transition-colors">
+<i class="ri-linkedin-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full text-gray-400 hover:bg-primary hover:text-white transition-colors">
+<i class="ri-twitter-x-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full text-gray-400 hover:bg-primary hover:text-white transition-colors">
+<i class="ri-instagram-fill"></i>
+</a>
+</div>
+</div>
+<div>
+<h3 class="text-xl font-semibold mb-6">Quick Links</h3>
+<ul class="space-y-3">
+<li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About Me</a></li>
+<li><a href="#projects" class="text-gray-400 hover:text-white transition-colors">Projects</a></li>
+<li><a href="#skills" class="text-gray-400 hover:text-white transition-colors">Skills</a></li>
+<li><a href="#achievements" class="text-gray-400 hover:text-white transition-colors">Achievements</a></li>
+<li><a href="#blog" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+<li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-xl font-semibold mb-6">Newsletter</h3>
+<p class="text-gray-400 mb-4">
+Subscribe to my newsletter for updates on my latest projects, blog posts, and tech insights.
+</p>
+<form class="flex">
+<input type="email" placeholder="Your email" class="flex-1 px-4 py-2 bg-gray-800 border-none text-white rounded-l focus:outline-none focus:ring-1 focus:ring-primary text-sm">
+<button type="submit" class="bg-primary text-white px-4 py-2 !rounded-r-button hover:bg-primary/90 transition-colors whitespace-nowrap">
+Subscribe
+</button>
+</form>
+<div class="mt-6">
+<h4 class="font-medium mb-2">Contact Info</h4>
+<p class="text-gray-400 flex items-center gap-2 mb-1">
+<i class="ri-mail-line"></i>
+<span>chanmiabek22@gmail.com</span>
+</p>
+<p class="text-gray-400 flex items-center gap-2 mb-1">
+<i class="ri-phone-line"></i>
+<span>+254 738 447 384</span>
+</p>
+<p class="text-gray-400 flex items-center gap-2">
+<i class="ri-time-line"></i>
+<span>Mon-Fri, 9AM-6PM EAT</span>
+</p>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-gray-800 text-center text-gray-500">
+<p>Coded with ❤️ by Maggiso | &copy; 2025 Chan Miabek. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// Typing animation
+const typingTextElement = document.getElementById('typingText');
+const roles = ['Fullstack Developer', 'Tech Innovator', 'Change Maker'];
+let roleIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+let typingSpeed = 100;
+function typeText() {
+const currentRole = roles[roleIndex];
+if (isDeleting) {
+typingTextElement.textContent = currentRole.substring(0, charIndex - 1);
+charIndex--;
+typingSpeed = 50;
+} else {
+typingTextElement.textContent = currentRole.substring(0, charIndex + 1);
+charIndex++;
+typingSpeed = 100;
+}
+if (!isDeleting && charIndex === currentRole.length) {
+isDeleting = true;
+typingSpeed = 1500; // Pause at the end
+} else if (isDeleting && charIndex === 0) {
+isDeleting = false;
+roleIndex = (roleIndex + 1) % roles.length;
+typingSpeed = 500; // Pause before typing next role
+}
+setTimeout(typeText, typingSpeed);
+}
+typeText();
+// Particle animation
+function createParticles() {
+const particlesContainer = document.getElementById('particles');
+const particleCount = 20;
+for (let i = 0; i < particleCount; i++) {
+const particle = document.createElement('div');
+particle.classList.add('particle');
+const size = Math.random() * 10 + 5;
+const posX = Math.random() * 100;
+const posY = Math.random() * 100;
+const duration = Math.random() * 20 + 10;
+const delay = Math.random() * 5;
+particle.style.width = `${size}px`;
+particle.style.height = `${size}px`;
+particle.style.left = `${posX}%`;
+particle.style.top = `${posY}%`;
+particle.style.opacity = Math.random() * 0.5 + 0.1;
+particle.style.animation = `float ${duration}s ease-in-out ${delay}s infinite alternate`;
+particlesContainer.appendChild(particle);
+}
+}
+createParticles();
+// Copy functionality
+function setupCopyButton(buttonId, text, successMessage = 'Copied!') {
+const button = document.getElementById(buttonId);
+if (button) {
+button.addEventListener('click', function() {
+navigator.clipboard.writeText(text).then(function() {
+const originalHTML = button.innerHTML;
+button.innerHTML = `<i class="ri-check-line"></i>`;
+setTimeout(function() {
+button.innerHTML = originalHTML;
+}, 2000);
+});
+});
+}
+}
+setupCopyButton('copyEmail', 'chanmiabek22@gmail.com');
+setupCopyButton('copyPhone', '+254 738 447 384');
+setupCopyButton('copyEmailAlt', 'chanmiabek22@gmail.com');
+setupCopyButton('copyPhoneAlt', '+254 738 447 384');
+});
+</script>
+</body>
+</html>
