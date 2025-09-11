@@ -12,125 +12,116 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
 <style>
-:where([class^="ri-"])::before { content: "\f3c2"; }
-body {
-font-family: 'Inter', sans-serif;
-scroll-behavior: smooth;
-}
-.typing-text::after {
-content: "|";
-animation: blink 1s infinite;
-}
-@keyframes blink {
-0%, 100% { opacity: 1; }
-50% { opacity: 0; }
-}
-.particle {
-position: absolute;
-border-radius: 50%;
-background: rgba(59, 130, 246, 0.1);
-pointer-events: none;
-}
-input:focus, textarea:focus {
-outline: none;
-border-color: #3b82f6;
-}
-.floating {
-animation: float 6s ease-in-out infinite;
-}
-@keyframes float {
-0%, 100% { transform: translateY(0); }
-50% { transform: translateY(-10px); }
-}
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+       body {
+         font-family: 'Inter', sans-serif;
+         scroll-behavior: smooth;
+       }
+      .typing-text::after {
+           content: "|";
+           animation: blink 1s infinite;
+       }     
+      @keyframes blink {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0; }
+       }
+     .particle {
+          position: absolute;
+          border-radius: 50%;
+           background: rgba(59, 130, 246, 0.1);
+          pointer-events: none;
+       }
+      input:focus, textarea:focus {
+           outline: none;
+           border-color: #3b82f6;
+       }
+     .floating {
+           animation: float 6s ease-in-out infinite;
+      }
+     @keyframes float {
+           0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+      }
 </style>
 </head>
-<body class="bg-white">
+  <body class="bg-white">
 <!-- Navigation -->
-<nav class="fixed top-0 w-full bg-white shadow-sm z-50">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex justify-between h-16">
-<div class="flex items-center">
-<a href="#" class="text-2xl font-['Pacifico'] text-primary">Maggiso</a>
-</div>
-<div class="hidden md:flex items-center space-x-8">
-<a href="#about" class="text-gray-700 hover:text-primary transition-colors">About</a>
-<a href="#projects" class="text-gray-700 hover:text-primary transition-colors">Projects</a>
-<a href="#skills" class="text-gray-700 hover:text-primary transition-colors">Skills</a>
-<a href="#achievements" class="text-gray-700 hover:text-primary transition-colors">Achievements</a>
-<a href="#blog" class="text-gray-700 hover:text-primary transition-colors">Blog</a>
-<a href="#contact" class="bg-primary text-white px-4 py-2 !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap">Contact Me</a>
-</div>
-<div class="flex md:hidden items-center">
-<button type="button" class="w-10 h-10 flex items-center justify-center text-gray-700">
-<i class="ri-menu-line ri-lg"></i>
-</button>
-</div>
-</div>
-</div>
-</nav>
+    <nav class="fixed top-0 w-full bg-white shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+         <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <a href="#" class="text-2xl font-['Pacifico'] text-primary">Maggiso</a>
+         </div>
+          <div class="hidden md:flex items-center space-x-8">
+           <a href="#about" class="text-gray-700 hover:text-primary transition-colors">About</a>
+           <a href="#projects" class="text-gray-700 hover:text-primary transition-colors">Projects</a>
+           <a href="#skills" class="text-gray-700 hover:text-primary transition-colors">Skills</a>
+           <a href="#achievements" class="text-gray-700 hover:text-primary transition-colors">Achievements</a>
+           <a href="#blog" class="text-gray-700 hover:text-primary transition-colors">Blog</a>
+           <a href="#contact" class="bg-primary text-white px-4 py-2 !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap">Contact Me</a>
+          </div>
+        <div class="flex md:hidden items-center">
+           <button type="button" class="w-10 h-10 flex items-center justify-center text-gray-700">
+           <i class="ri-menu-line ri-lg"></i>
+           </button>
+            </div>
+           </div>
+        </div>
+    </nav>
 <!-- Hero Section -->
-<section class="pt-24 pb-16 md:pt-32 md:pb-24 relative overflow-hidden" id="hero">
-<div class="absolute inset-0 opacity-5" id="particles"></div>
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-<div class="flex flex-col md:flex-row items-center gap-8 md:gap-16">
-<div class="w-full md:w-1/2">
-<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
-Chan Miabek
-</h1>
-<div class="text-xl md:text-2xl text-primary font-medium mb-6 typing-text" id="typingText">
-Fullstack Developer
-</div>
-<p class="text-lg text-gray-700 mb-8">
-I am an ambitious and passionate upcoming software developer, eager to establish myself in the tech industry. With a solid foundation in programming languages such as HTML, CSS, JavaScript or React.JS for frontend development , Java and Python for backend APIs development , I am continually expanding my skills and knowledge to stay aligned with modern development practices. As a newcomer to the industry, I bring a fresh perspective, a strong willingness to learn, and a commitment to continuous improvement through hands-on experience and collaboration with experienced professionals.
-</p>
-<div class="flex flex-col sm:flex-row gap-4 mb-8">
-<div class="flex items-center gap-2 bg-gray-50 px-4 py-3 rounded">
-<i class="ri-mail-line ri-lg text-primary"></i>
-<span class="text-gray-700">chanmiabek22@gmail.com</span>
-<button class="ml-auto w-8 h-8 flex items-center justify-center text-gray-500 hover:text-primary" id="copyEmail">
-<i class="ri-file-copy-line"></i>
-</button>
-</div>
-<div class="flex items-center gap-2 bg-gray-50 px-4 py-3 rounded">
-<i class="ri-phone-line ri-lg text-primary"></i>
-<span class="text-gray-700">+254 738 447 384</span>
-<button class="ml-auto w-8 h-8 flex items-center justify-center text-gray-500 hover:text-primary" id="copyPhone">
-<i class="ri-file-copy-line"></i>
-</button>
-</div>
-</div>
-<a href="#contact" class="inline-block bg-primary text-white px-8 py-3 !rounded-button hover:bg-primary/90 transition-transform hover:-translate-y-1 whitespace-nowrap">
-Let's Connect
-</a>
-</div>
-<div class="w-full md:w-1/2 flex justify-center">
-<div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full bg-gray-100 overflow-hidden border-4 border-white shadow-xl floating">
-<img src="./image/profile.jpg"
-alt="Chan Miabek"
-class="w-full h-full object-cover object-top">
-</div>
-</div>
-</div>
-</div>
-</section>
+   <section class="pt-24 pb-16 md:pt-32 md:pb-24 relative overflow-hidden" id="hero">
+      <div class="absolute inset-0 opacity-5" id="particles"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16">
+              <div class="w-full md:w-1/2">
+                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">I'm Chan Miabek</h1>
+                  <div class="text-xl md:text-2xl text-primary font-medium mb-6 typing-text" id="typingText">
+                      Fullstack Developer</div>
+                        <p class="text-lg text-gray-700 mb-8">I am an ambitious and passionate upcoming software developer, eager to establish myself in the tech industry. With a solid foundation in programming languages such as HTML, CSS, JavaScript or React.JS for frontend development , Java and Python for backend APIs development , I am continually expanding my skills and knowledge to stay aligned with modern development practices. As a newcomer to the industry, I bring a fresh perspective, a strong willingness to learn, and a commitment to continuous improvement through hands-on experience and collaboration with experienced professionals.</p>
+
+                       <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                          <div class="flex items-center gap-2 bg-gray-50 px-4 py-3 rounded">
+                               <i class="ri-mail-line ri-lg text-primary"></i>
+                                <span class="text-gray-700">chanmiabek22@gmail.com</span>
+                                <button class="ml-auto w-8 h-8 flex items-center justify-center text-gray-500 hover:text-primary" id="copyEmail">
+                                  <i class="ri-file-copy-line"></i>
+                                </button>
+                            </div>
+                            <div class="flex items-center gap-2 bg-gray-50 px-4 py-3 rounded">
+                               <i class="ri-phone-line ri-lg text-primary"></i>
+                                <span class="text-gray-700">+254 738 447 384</span>
+                                 <button class="ml-auto w-8 h-8 flex items-center justify-center text-gray-500 hover:text-primary" id="copyPhone">
+                                  <i class="ri-file-copy-line"></i>
+                                 </button>
+                              </div>
+                            </div>
+                            <a href="#contact" class="inline-block bg-primary text-white px-8 py-3 !rounded-button hover:bg-primary/90 transition-transform hover:-translate-y-1 whitespace-nowrap">Let's Connect</a>
+                            </div>
+                       <div class="w-full md:w-1/2 flex justify-center">
+                        <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full bg-gray-100 overflow-hidden border-4 border-white shadow-xl floating">
+                          <img src="./image/profile.jpg" alt="Chan Miabek"
+                                class="w-full h-full object-cover object-top">
+                        </div>
+                 </div>
+                 </div>
+            </div>
+    </section>
 <!-- About Section -->
 <section class="py-16 bg-gray-50" id="about">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center mb-12">
-<h2 class="text-3xl font-bold text-gray-900">About Me</h2>
-<div class="w-16 h-1 bg-primary mx-auto mt-4"></div>
-</div>
-<div class="flex flex-col md:flex-row gap-12">
-<div class="w-full md:w-1/2">
-<h3 class="text-2xl font-semibold text-gray-900 mb-4">My Journey</h3>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900">About Me</h2>
+       <div class="w-16 h-1 bg-primary mx-auto mt-4"></div>
+    </div>
+    <div class="flex flex-col md:flex-row gap-12">
+   <div class="w-full md:w-1/2">
+   <h3 class="text-2xl font-semibold text-gray-900 mb-4">My Journey</h3>
+   <p class="text-gray-700 mb-4">As a fullstack developer, Software developer and web designer, I've transformed challenges into opportunities for growth and innovation. My journey in tech began with a curiosity about how digital solutions could address the unique challenges faced in refugee settings.</p>
 <p class="text-gray-700 mb-4">
-As a fullstack developer based in Kakuma Refugee Camp, I've transformed challenges into opportunities for growth and innovation. My journey in tech began with a curiosity about how digital solutions could address the unique challenges faced in refugee settings.
-</p>
-<p class="text-gray-700 mb-4">
-Despite limited resources, I taught myself programming through online courses, community workshops, and countless hours of practice. What started as a personal pursuit has evolved into a mission to leverage technology for positive change.
+      Despite limited resources, I taught myself programming through online courses, community workshops, and countless hours of practice. What started as a personal pursuit has evolved into a mission to leverage technology for positive change.
 </p>
 <p class="text-gray-700">
-Today, I specialize in creating responsive web applications, mobile solutions, and community-focused digital tools that bridge gaps and create opportunities for underserved communities.
+    Today, I specialize in creating responsive web applications, software solutions, and community-focused digital tools that bridge gaps and create opportunities for underserved communities.
 </p>
 </div>
 <div class="w-full md:w-1/2">
@@ -397,10 +388,10 @@ class="w-full h-full object-cover object-top transition-transform hover:scale-10
 An e-learning platform designed specifically for refugee students in Kakuma, providing access to educational resources even with limited internet connectivity.
 </p>
 <div class="flex flex-wrap gap-2 mb-4">
-<span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">React</span>
-<span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Node.js</span>
-<span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">MongoDB</span>
-<span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Express.js</span>
+    <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">React</span>
+    <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Node.js</span>
+    <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">MongoDB</span>
+   <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Express.js</span>
 </div>
 <div class="flex justify-between">
 <a href="https://react-klp-frontend.onrender.com/" class="text-primary hover:text-primary/80 flex items-center gap-1">
