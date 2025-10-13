@@ -11,38 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
-<style>
-      :where([class^="ri-"])::before { content: "\f3c2"; }
-       body {
-         font-family: 'Inter', sans-serif;
-         scroll-behavior: smooth;
-       }
-      .typing-text::after {
-           content: "|";
-           animation: blink 1s infinite;
-       }     
-      @keyframes blink {
-          0%, 100% { opacity: 1; }
-          50% { opacity: 0; }
-       }
-     .particle {
-          position: absolute;
-          border-radius: 50%;
-           background: rgba(59, 130, 246, 0.1);
-          pointer-events: none;
-       }
-      input:focus, textarea:focus {
-           outline: none;
-           border-color: #3b82f6;
-       }
-     .floating {
-           animation: float 6s ease-in-out infinite;
-      }
-     @keyframes float {
-           0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-      }
-</style>
+<link rel="stylesheet" href="./style.css">
 </head>
   <body class="bg-white">
 <!-- Navigation -->
@@ -437,23 +406,23 @@ A mobile application that helps refugees track health appointments, medication s
 <!-- Project 3 -->
 <div class="bg-white rounded overflow-hidden shadow-sm transition-transform hover:-translate-y-1">
 <div class="h-48 overflow-hidden">
-<img src="https://readdy.ai/api/search-image?query=A%2520community%2520marketplace%2520web%2520application%2520interface%2520showing%2520local%2520products%2C%2520services%2C%2520and%2520skills%2520exchange.%2520The%2520design%2520features%2520a%2520grid%2520layout%2520of%2520product%2520cards%2C%2520search%2520functionality%2C%2520and%2520category%2520filters.%2520The%2520interface%2520is%2520colorful%2520but%2520professional%2C%2520designed%2520to%2520showcase%2520local%2520crafts%2520and%2520services%2520from%2520a%2520refugee%2520community.&width=600&height=400&seq=project3&orientation=landscape"
-alt="KakumaMarket Platform"
+<img src="./image/project4.png"
+alt="NovaTech Solution"
 class="w-full h-full object-cover object-top transition-transform hover:scale-105">
 </div>
 <div class="p-6">
-<h3 class="text-xl font-semibold text-gray-900 mb-2">Kakuma Market Platform</h3>
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Nova Tech Solution</h3>
 <p class="text-gray-700 mb-4">
 A digital marketplace connecting refugee artisans and entrepreneurs with customers globally, facilitating economic empowerment.
 </p>
 <div class="flex flex-wrap gap-2 mb-4">
-<span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">React.js</span>
-<span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Node.js</span>
-<span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">MongoDB</span>
-<span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">M-Pesa Integration</span>
+<span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">HTML</span>
+<span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">JavaScript</span>
+<span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">SASS</span>
+<span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">CSS</span>
 </div>
 <div class="flex justify-between">
-<a href="#" class="text-primary hover:text-primary/80 flex items-center gap-1">
+<a href="https://onlinelearning-azure.vercel.app/" class="text-primary hover:text-primary/80 flex items-center gap-1">
 <span>View Project</span>
 <i class="ri-arrow-right-line"></i>
 </a>
@@ -549,7 +518,7 @@ I share my thoughts, experiences, and technical insights on my journey as a deve
 <!-- Blog Post 1 -->
 <div class="bg-white rounded overflow-hidden shadow-sm transition-transform hover:-translate-y-1">
 <div class="h-48 overflow-hidden">
-<img src="https://readdy.ai/api/search-image?query=A%2520coding%2520workspace%2520in%2520a%2520modest%2520setting%2C%2520showing%2520a%2520laptop%2520with%2520code%2520on%2520screen%2C%2520surrounded%2520by%2520notebooks%2520and%2520a%2520simple%2520desk%2520setup.%2520The%2520image%2520conveys%2520determination%2520and%2520focus%2520despite%2520limited%2520resources.%2520Natural%2520lighting%2520creates%2520a%2520hopeful%2C%2520inspiring%2520atmosphere.%2520The%2520setting%2520suggests%2520a%2520refugee%2520camp%2520environment%2520but%2520with%2520dignity%2520and%2520purpose.&width=600&height=400&seq=blog1&orientation=landscape"
+<img src="./image//coding.jpg"
 alt="Coding in Kakuma"
 class="w-full h-full object-cover object-top transition-transform hover:scale-105">
 </div>
@@ -574,7 +543,7 @@ How I navigate the challenges of unreliable internet, power outages, and limited
 <!-- Blog Post 2 -->
 <div class="bg-white rounded overflow-hidden shadow-sm transition-transform hover:-translate-y-1">
 <div class="h-48 overflow-hidden">
-<img src="https://readdy.ai/api/search-image?query=A%2520group%2520of%2520diverse%2520young%2520people%2520gathered%2520around%2520computers%2520in%2520a%2520simple%2520classroom%2520setting%2C%2520engaged%2520in%2520learning%2520to%2520code.%2520The%2520image%2520shows%2520collaboration%2520and%2520mentorship%2C%2520with%2520one%2520person%2520explaining%2520something%2520on%2520screen%2520to%2520others.%2520The%2520setting%2520suggests%2520a%2520community%2520center%2520or%2520school%2520in%2520a%2520refugee%2520camp%2C%2520with%2520basic%2520but%2520functional%2520equipment.%2520The%2520atmosphere%2520is%2520one%2520of%2520determination%2520and%2520hope.&width=600&height=400&seq=blog2&orientation=landscape"
+<img src="./image//codingprograms.jpg"
 alt="Teaching Code"
 class="w-full h-full object-cover object-top transition-transform hover:scale-105">
 </div>
@@ -586,7 +555,7 @@ class="w-full h-full object-cover object-top transition-transform hover:scale-10
 <i class="ri-time-line"></i>
 <span>7 min read</span>
 </div>
-<h3 class="text-xl font-semibold text-gray-900 mb-2">From Student to Teacher: My Coding Workshop Journey</h3>
+<h3 class="text-xl font-semibold text-gray-900 mb-2">My Coding Workshop Journey</h3>
 <p class="text-gray-700 mb-4">
 Reflections on starting a coding workshop for youth in Kakuma and how teaching has improved my own programming skills.
 </p>
@@ -599,7 +568,7 @@ Reflections on starting a coding workshop for youth in Kakuma and how teaching h
 <!-- Blog Post 3 -->
 <div class="bg-white rounded overflow-hidden shadow-sm transition-transform hover:-translate-y-1">
 <div class="h-48 overflow-hidden">
-<img src="https://readdy.ai/api/search-image?query=A%2520professional%2520remote%2520work%2520setup%2520showing%2520a%2520laptop%2520connected%2520to%2520a%2520global%2520team%2520meeting%2520on%2520screen.%2520The%2520workspace%2520is%2520modest%2520but%2520organized%2C%2520with%2520notes%2520and%2520a%2520notebook%2520nearby.%2520The%2520screen%2520shows%2520multiple%2520people%2520in%2520a%2520video%2520conference%2C%2520suggesting%2520international%2520collaboration.%2520The%2520setting%2520indicates%2520a%2520resourceful%2520approach%2520to%2520remote%2520work%2520from%2520a%2520challenging%2520environment.&width=600&height=400&seq=blog3&orientation=landscape"
+<img src="./image//mywork.jpg"
 alt="Remote Work"
 class="w-full h-full object-cover object-top transition-transform hover:scale-105">
 </div>
